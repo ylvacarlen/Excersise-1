@@ -6,9 +6,7 @@ author: "Ylva Carlen"
 format: html
 editor: visual
 ---
-```{r}
-?qnbinom()
-```
+
 
 #### Define the variables
 
@@ -45,5 +43,11 @@ x1 <- rnbinom(100, mu = 10, size = 2)
 h1<-hist(x1, main= paste("Histogramm of negative binomia-distribution, with mean=10 and sd=210"), col="lightblue")
 ```
 
+#### Log Transformation
 
+```{r}
+?log
+log_x1<- log10(x1+1)
+h2<-hist(log_x1, main= paste("Histogramm of negative binomia-distribution (log), with mean=10 and sd=210"), col="lightpink")
 
+```

@@ -1,0 +1,46 @@
+---
+title: "1B Excersice 1"
+author: "Ylva Carlen"
+format: html
+editor: visual
+---
+
+#### Define the variables
+
+the Mean:
+
+```{r}
+mu=10
+mean<-mu
+mean
+```
+The Variance:
+
+```{r}
+variance=mu+mu^2*2
+variance
+
+```
+#### Variable in line
+The variance and the mean can be calculated with the formula variance= mean+mean^2*dispersion. By using the Formula with a mean of `r mean` and a dispersion of 2 we obtain for the variance `r variance`.
+
+
+#### Define the negative binomial distribution to x1
+
+```{r}
+x1 <- rnbinom(100, mu = 10, size = 2)
+```
+
+#### Create a histogram
+
+```{r}
+h1<-hist(x1, main= paste("Histogramm of negative binomia-distribution"), col="lightblue")
+```
+
+#### Log Transformation
+
+```{r}
+log_x1<- log10(x1+1)
+h2<-hist(log_x1, main= paste("Histogramm of negative binomia-distribution (log)"), col="lightpink")
+
+```
